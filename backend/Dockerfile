@@ -5,6 +5,8 @@ WORKDIR app
 COPY mvnw .
 COPY .mvn .mvn
 COPY pom.xml .
+RUN apk add --no-cache dos2unix
+RUN dos2unix ./mvnw
 RUN ./mvnw dependency:go-offline
 
 COPY src src
