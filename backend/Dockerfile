@@ -10,7 +10,7 @@ RUN dos2unix ./mvnw
 RUN ./mvnw dependency:go-offline
 
 COPY src src
-RUN ./mvnw package -DskipTests
+RUN ./mvnw package
 
 ARG JAR_FILE=target/*.jar
 RUN java -Djarmode=layertools -jar ${JAR_FILE} extract --destination target/extracted

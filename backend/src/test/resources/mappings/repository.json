@@ -1,0 +1,433 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "method": "GET",
+        "urlPath": "/search/repositories",
+        "queryParameters": {
+          "q": {
+            "equalTo": "user:adamsm2 fork:false"
+          },
+          "page": {
+            "equalTo": "2"
+          },
+          "per_page": {
+            "equalTo": "2"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "jsonBody": {
+          "total_count": 8,
+          "incomplete_results": false,
+          "items": [
+            {
+              "id": 615407922,
+              "node_id": "R_kgDOJK5hMg",
+              "name": "optimal-heart-rate-calculator",
+              "full_name": "adamsm2/optimal-heart-rate-calculator",
+              "private": false,
+              "owner": {
+                "login": "adamsm2",
+                "id": 95346590,
+                "node_id": "U_kgDOBa7fng",
+                "avatar_url": "https://avatars.githubusercontent.com/u/95346590?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/adamsm2",
+                "html_url": "https://github.com/adamsm2",
+                "followers_url": "https://api.github.com/users/adamsm2/followers",
+                "following_url": "https://api.github.com/users/adamsm2/following{/other_user}",
+                "gists_url": "https://api.github.com/users/adamsm2/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/adamsm2/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/adamsm2/subscriptions",
+                "organizations_url": "https://api.github.com/users/adamsm2/orgs",
+                "repos_url": "https://api.github.com/users/adamsm2/repos",
+                "events_url": "https://api.github.com/users/adamsm2/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/adamsm2/received_events",
+                "type": "User",
+                "site_admin": false
+              },
+              "html_url": "https://github.com/adamsm2/optimal-heart-rate-calculator",
+              "description": "A mobile application which calculates the optimal heart rate based on given parameters.",
+              "fork": false,
+              "url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator",
+              "forks_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/forks",
+              "keys_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/keys{/key_id}",
+              "collaborators_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/collaborators{/collaborator}",
+              "teams_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/teams",
+              "hooks_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/hooks",
+              "issue_events_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/issues/events{/number}",
+              "events_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/events",
+              "assignees_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/assignees{/user}",
+              "branches_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/branches{/branch}",
+              "tags_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/tags",
+              "blobs_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/git/blobs{/sha}",
+              "git_tags_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/git/tags{/sha}",
+              "git_refs_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/git/refs{/sha}",
+              "trees_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/git/trees{/sha}",
+              "statuses_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/statuses/{sha}",
+              "languages_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/languages",
+              "stargazers_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/stargazers",
+              "contributors_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/contributors",
+              "subscribers_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/subscribers",
+              "subscription_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/subscription",
+              "commits_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/commits{/sha}",
+              "git_commits_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/git/commits{/sha}",
+              "comments_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/comments{/number}",
+              "issue_comment_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/issues/comments{/number}",
+              "contents_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/contents/{+path}",
+              "compare_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/compare/{base}...{head}",
+              "merges_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/merges",
+              "archive_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/{archive_format}{/ref}",
+              "downloads_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/downloads",
+              "issues_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/issues{/number}",
+              "pulls_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/pulls{/number}",
+              "milestones_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/milestones{/number}",
+              "notifications_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/notifications{?since,all,participating}",
+              "labels_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/labels{/name}",
+              "releases_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/releases{/id}",
+              "deployments_url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/deployments",
+              "created_at": "2023-03-17T16:13:31Z",
+              "updated_at": "2024-05-10T19:16:34Z",
+              "pushed_at": "2024-05-10T19:15:35Z",
+              "git_url": "git://github.com/adamsm2/optimal-heart-rate-calculator.git",
+              "ssh_url": "git@github.com:adamsm2/optimal-heart-rate-calculator.git",
+              "clone_url": "https://github.com/adamsm2/optimal-heart-rate-calculator.git",
+              "svn_url": "https://github.com/adamsm2/optimal-heart-rate-calculator",
+              "homepage": "",
+              "size": 292,
+              "stargazers_count": 0,
+              "watchers_count": 0,
+              "language": "Kotlin",
+              "has_issues": true,
+              "has_projects": true,
+              "has_downloads": true,
+              "has_wiki": false,
+              "has_pages": false,
+              "has_discussions": false,
+              "forks_count": 0,
+              "mirror_url": null,
+              "archived": false,
+              "disabled": false,
+              "open_issues_count": 0,
+              "license": null,
+              "allow_forking": true,
+              "is_template": false,
+              "web_commit_signoff_required": false,
+              "topics": [],
+              "visibility": "public",
+              "forks": 0,
+              "open_issues": 0,
+              "watchers": 0,
+              "default_branch": "master",
+              "score": 1
+            },
+            {
+              "id": 832364176,
+              "node_id": "R_kgDOMZzekA",
+              "name": "recruitment-task2",
+              "full_name": "adamsm2/recruitment-task2",
+              "private": false,
+              "owner": {
+                "login": "adamsm2",
+                "id": 95346590,
+                "node_id": "U_kgDOBa7fng",
+                "avatar_url": "https://avatars.githubusercontent.com/u/95346590?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/adamsm2",
+                "html_url": "https://github.com/adamsm2",
+                "followers_url": "https://api.github.com/users/adamsm2/followers",
+                "following_url": "https://api.github.com/users/adamsm2/following{/other_user}",
+                "gists_url": "https://api.github.com/users/adamsm2/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/adamsm2/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/adamsm2/subscriptions",
+                "organizations_url": "https://api.github.com/users/adamsm2/orgs",
+                "repos_url": "https://api.github.com/users/adamsm2/repos",
+                "events_url": "https://api.github.com/users/adamsm2/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/adamsm2/received_events",
+                "type": "User",
+                "site_admin": false
+              },
+              "html_url": "https://github.com/adamsm2/recruitment-task2",
+              "description": null,
+              "fork": false,
+              "url": "https://api.github.com/repos/adamsm2/recruitment-task2",
+              "forks_url": "https://api.github.com/repos/adamsm2/recruitment-task2/forks",
+              "keys_url": "https://api.github.com/repos/adamsm2/recruitment-task2/keys{/key_id}",
+              "collaborators_url": "https://api.github.com/repos/adamsm2/recruitment-task2/collaborators{/collaborator}",
+              "teams_url": "https://api.github.com/repos/adamsm2/recruitment-task2/teams",
+              "hooks_url": "https://api.github.com/repos/adamsm2/recruitment-task2/hooks",
+              "issue_events_url": "https://api.github.com/repos/adamsm2/recruitment-task2/issues/events{/number}",
+              "events_url": "https://api.github.com/repos/adamsm2/recruitment-task2/events",
+              "assignees_url": "https://api.github.com/repos/adamsm2/recruitment-task2/assignees{/user}",
+              "branches_url": "https://api.github.com/repos/adamsm2/recruitment-task2/branches{/branch}",
+              "tags_url": "https://api.github.com/repos/adamsm2/recruitment-task2/tags",
+              "blobs_url": "https://api.github.com/repos/adamsm2/recruitment-task2/git/blobs{/sha}",
+              "git_tags_url": "https://api.github.com/repos/adamsm2/recruitment-task2/git/tags{/sha}",
+              "git_refs_url": "https://api.github.com/repos/adamsm2/recruitment-task2/git/refs{/sha}",
+              "trees_url": "https://api.github.com/repos/adamsm2/recruitment-task2/git/trees{/sha}",
+              "statuses_url": "https://api.github.com/repos/adamsm2/recruitment-task2/statuses/{sha}",
+              "languages_url": "https://api.github.com/repos/adamsm2/recruitment-task2/languages",
+              "stargazers_url": "https://api.github.com/repos/adamsm2/recruitment-task2/stargazers",
+              "contributors_url": "https://api.github.com/repos/adamsm2/recruitment-task2/contributors",
+              "subscribers_url": "https://api.github.com/repos/adamsm2/recruitment-task2/subscribers",
+              "subscription_url": "https://api.github.com/repos/adamsm2/recruitment-task2/subscription",
+              "commits_url": "https://api.github.com/repos/adamsm2/recruitment-task2/commits{/sha}",
+              "git_commits_url": "https://api.github.com/repos/adamsm2/recruitment-task2/git/commits{/sha}",
+              "comments_url": "https://api.github.com/repos/adamsm2/recruitment-task2/comments{/number}",
+              "issue_comment_url": "https://api.github.com/repos/adamsm2/recruitment-task2/issues/comments{/number}",
+              "contents_url": "https://api.github.com/repos/adamsm2/recruitment-task2/contents/{+path}",
+              "compare_url": "https://api.github.com/repos/adamsm2/recruitment-task2/compare/{base}...{head}",
+              "merges_url": "https://api.github.com/repos/adamsm2/recruitment-task2/merges",
+              "archive_url": "https://api.github.com/repos/adamsm2/recruitment-task2/{archive_format}{/ref}",
+              "downloads_url": "https://api.github.com/repos/adamsm2/recruitment-task2/downloads",
+              "issues_url": "https://api.github.com/repos/adamsm2/recruitment-task2/issues{/number}",
+              "pulls_url": "https://api.github.com/repos/adamsm2/recruitment-task2/pulls{/number}",
+              "milestones_url": "https://api.github.com/repos/adamsm2/recruitment-task2/milestones{/number}",
+              "notifications_url": "https://api.github.com/repos/adamsm2/recruitment-task2/notifications{?since,all,participating}",
+              "labels_url": "https://api.github.com/repos/adamsm2/recruitment-task2/labels{/name}",
+              "releases_url": "https://api.github.com/repos/adamsm2/recruitment-task2/releases{/id}",
+              "deployments_url": "https://api.github.com/repos/adamsm2/recruitment-task2/deployments",
+              "created_at": "2024-07-22T21:54:28Z",
+              "updated_at": "2024-07-22T23:18:33Z",
+              "pushed_at": "2024-07-22T23:18:30Z",
+              "git_url": "git://github.com/adamsm2/recruitment-task2.git",
+              "ssh_url": "git@github.com:adamsm2/recruitment-task2.git",
+              "clone_url": "https://github.com/adamsm2/recruitment-task2.git",
+              "svn_url": "https://github.com/adamsm2/recruitment-task2",
+              "homepage": null,
+              "size": 493,
+              "stargazers_count": 0,
+              "watchers_count": 0,
+              "language": "TypeScript",
+              "has_issues": true,
+              "has_projects": true,
+              "has_downloads": true,
+              "has_wiki": true,
+              "has_pages": true,
+              "has_discussions": false,
+              "forks_count": 0,
+              "mirror_url": null,
+              "archived": false,
+              "disabled": false,
+              "open_issues_count": 0,
+              "license": null,
+              "allow_forking": true,
+              "is_template": false,
+              "web_commit_signoff_required": false,
+              "topics": [],
+              "visibility": "public",
+              "forks": 0,
+              "open_issues": 0,
+              "watchers": 0,
+              "default_branch": "main",
+              "score": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "urlPath": "/search/repositories",
+        "queryParameters": {
+          "q": {
+            "equalTo": "user:adamsm22 fork:false"
+          }
+        }
+      },
+      "response": {
+        "status": 422
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "urlPath": "/search/repositories",
+        "queryParameters": {
+          "q": {
+            "equalTo": "user:adamsm2 fork:false"
+          },
+          "page": {
+            "equalTo": "1"
+          },
+          "per_page": {
+            "equalTo": "1"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "jsonBody": {
+          "total_count": 8,
+          "incomplete_results": false,
+          "items": [
+            {
+              "id": 795570276,
+              "node_id": "R_kgDOL2twZA",
+              "name": "noLongerExists",
+              "full_name": "adamsm2/housing-community-management",
+              "private": false,
+              "owner": {
+                "login": "adamsm2",
+                "id": 95346590,
+                "node_id": "U_kgDOBa7fng",
+                "avatar_url": "https://avatars.githubusercontent.com/u/95346590?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/adamsm2",
+                "html_url": "https://github.com/adamsm2",
+                "followers_url": "https://api.github.com/users/adamsm2/followers",
+                "following_url": "https://api.github.com/users/adamsm2/following{/other_user}",
+                "gists_url": "https://api.github.com/users/adamsm2/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/adamsm2/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/adamsm2/subscriptions",
+                "organizations_url": "https://api.github.com/users/adamsm2/orgs",
+                "repos_url": "https://api.github.com/users/adamsm2/repos",
+                "events_url": "https://api.github.com/users/adamsm2/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/adamsm2/received_events",
+                "type": "User",
+                "site_admin": false
+              },
+              "html_url": "https://github.com/adamsm2/housing-community-management",
+              "description": "A full-stack application for residents and managers of a housing community with JWT authentication and refresh tokens management. Tech stack: Java, SpringBoot, Typescript, React, Tailwind, Docker, PostgreSQL",
+              "fork": false,
+              "url": "https://api.github.com/repos/adamsm2/housing-community-management",
+              "forks_url": "https://api.github.com/repos/adamsm2/housing-community-management/forks",
+              "keys_url": "https://api.github.com/repos/adamsm2/housing-community-management/keys{/key_id}",
+              "collaborators_url": "https://api.github.com/repos/adamsm2/housing-community-management/collaborators{/collaborator}",
+              "teams_url": "https://api.github.com/repos/adamsm2/housing-community-management/teams",
+              "hooks_url": "https://api.github.com/repos/adamsm2/housing-community-management/hooks",
+              "issue_events_url": "https://api.github.com/repos/adamsm2/housing-community-management/issues/events{/number}",
+              "events_url": "https://api.github.com/repos/adamsm2/housing-community-management/events",
+              "assignees_url": "https://api.github.com/repos/adamsm2/housing-community-management/assignees{/user}",
+              "branches_url": "https://api.github.com/repos/adamsm2/housing-community-management/branches{/branch}",
+              "tags_url": "https://api.github.com/repos/adamsm2/housing-community-management/tags",
+              "blobs_url": "https://api.github.com/repos/adamsm2/housing-community-management/git/blobs{/sha}",
+              "git_tags_url": "https://api.github.com/repos/adamsm2/housing-community-management/git/tags{/sha}",
+              "git_refs_url": "https://api.github.com/repos/adamsm2/housing-community-management/git/refs{/sha}",
+              "trees_url": "https://api.github.com/repos/adamsm2/housing-community-management/git/trees{/sha}",
+              "statuses_url": "https://api.github.com/repos/adamsm2/housing-community-management/statuses/{sha}",
+              "languages_url": "https://api.github.com/repos/adamsm2/housing-community-management/languages",
+              "stargazers_url": "https://api.github.com/repos/adamsm2/housing-community-management/stargazers",
+              "contributors_url": "https://api.github.com/repos/adamsm2/housing-community-management/contributors",
+              "subscribers_url": "https://api.github.com/repos/adamsm2/housing-community-management/subscribers",
+              "subscription_url": "https://api.github.com/repos/adamsm2/housing-community-management/subscription",
+              "commits_url": "https://api.github.com/repos/adamsm2/housing-community-management/commits{/sha}",
+              "git_commits_url": "https://api.github.com/repos/adamsm2/housing-community-management/git/commits{/sha}",
+              "comments_url": "https://api.github.com/repos/adamsm2/housing-community-management/comments{/number}",
+              "issue_comment_url": "https://api.github.com/repos/adamsm2/housing-community-management/issues/comments{/number}",
+              "contents_url": "https://api.github.com/repos/adamsm2/housing-community-management/contents/{+path}",
+              "compare_url": "https://api.github.com/repos/adamsm2/housing-community-management/compare/{base}...{head}",
+              "merges_url": "https://api.github.com/repos/adamsm2/housing-community-management/merges",
+              "archive_url": "https://api.github.com/repos/adamsm2/housing-community-management/{archive_format}{/ref}",
+              "downloads_url": "https://api.github.com/repos/adamsm2/housing-community-management/downloads",
+              "issues_url": "https://api.github.com/repos/adamsm2/housing-community-management/issues{/number}",
+              "pulls_url": "https://api.github.com/repos/adamsm2/housing-community-management/pulls{/number}",
+              "milestones_url": "https://api.github.com/repos/adamsm2/housing-community-management/milestones{/number}",
+              "notifications_url": "https://api.github.com/repos/adamsm2/housing-community-management/notifications{?since,all,participating}",
+              "labels_url": "https://api.github.com/repos/adamsm2/housing-community-management/labels{/name}",
+              "releases_url": "https://api.github.com/repos/adamsm2/housing-community-management/releases{/id}",
+              "deployments_url": "https://api.github.com/repos/adamsm2/housing-community-management/deployments",
+              "created_at": "2024-05-03T15:07:04Z",
+              "updated_at": "2024-07-16T09:38:16Z",
+              "pushed_at": "2024-07-16T08:57:56Z",
+              "git_url": "git://github.com/adamsm2/housing-community-management.git",
+              "ssh_url": "git@github.com:adamsm2/housing-community-management.git",
+              "clone_url": "https://github.com/adamsm2/housing-community-management.git",
+              "svn_url": "https://github.com/adamsm2/housing-community-management",
+              "homepage": "",
+              "size": 14604,
+              "stargazers_count": 2,
+              "watchers_count": 2,
+              "language": "Java",
+              "has_issues": true,
+              "has_projects": true,
+              "has_downloads": true,
+              "has_wiki": true,
+              "has_pages": false,
+              "has_discussions": false,
+              "forks_count": 0,
+              "mirror_url": null,
+              "archived": false,
+              "disabled": false,
+              "open_issues_count": 0,
+              "license": null,
+              "allow_forking": true,
+              "is_template": false,
+              "web_commit_signoff_required": false,
+              "topics": [
+                "docker",
+                "java",
+                "jwt",
+                "postgresql",
+                "react",
+                "refresh-token",
+                "spring-boot",
+                "swagger",
+                "tailwind",
+                "tailwindcss",
+                "typescript"
+              ],
+              "visibility": "public",
+              "forks": 0,
+              "open_issues": 0,
+              "watchers": 2,
+              "default_branch": "main",
+              "score": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "urlPath": "/search/repositories",
+        "queryParameters": {
+          "q": {
+            "equalTo": "user:serviceUnavailable fork:false"
+          }
+        }
+      },
+      "response": {
+        "status": 503
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "urlPath": "/search/repositories",
+        "queryParameters": {
+          "q": {
+            "equalTo": "user:rateLimitExceeded fork:false"
+          }
+        }
+      },
+      "response": {
+        "status": 403
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "urlPath": "/search/repositories",
+        "queryParameters": {
+          "q": {
+            "equalTo": "user:unauthorized fork:false"
+          }
+        }
+      },
+      "response": {
+        "status": 401
+      }
+    }
+  ]
+}

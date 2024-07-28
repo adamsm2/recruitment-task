@@ -1,0 +1,3 @@
+app:
+  githubAccessToken: "test"
+  githubApiUrl: "http://localhost:8081"

@@ -1,0 +1,81 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "method": "GET",
+        "urlPath": "/repos/adamsm2/recruitment-task2/branches"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "jsonBody": [
+          {
+            "name": "deployment",
+            "commit": {
+              "sha": "65fd227c0f04dcbe64b494333b59bf8bd8baf53b",
+              "url": "https://api.github.com/repos/adamsm2/recruitment-task2/commits/65fd227c0f04dcbe64b494333b59bf8bd8baf53b"
+            },
+            "protected": false
+          },
+          {
+            "name": "gh-pages",
+            "commit": {
+              "sha": "9e6059308bf3b292833380b0780c51b7f8539e72",
+              "url": "https://api.github.com/repos/adamsm2/recruitment-task2/commits/9e6059308bf3b292833380b0780c51b7f8539e72"
+            },
+            "protected": false
+          },
+          {
+            "name": "main",
+            "commit": {
+              "sha": "a712a832ccce42165883473d4f798dd3d97d8440",
+              "url": "https://api.github.com/repos/adamsm2/recruitment-task2/commits/a712a832ccce42165883473d4f798dd3d97d8440"
+            },
+            "protected": false
+          }
+        ]
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "urlPath": "/repos/adamsm2/optimal-heart-rate-calculator/branches"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "jsonBody": [
+          {
+            "name": "master",
+            "commit": {
+              "sha": "c24264244e3eda1d4b2cf22823e6ca6300849c82",
+              "url": "https://api.github.com/repos/adamsm2/optimal-heart-rate-calculator/commits/c24264244e3eda1d4b2cf22823e6ca6300849c82"
+            },
+            "protected": false
+          }
+        ]
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "urlPath": "/repos/adamsm2/noLongerExists/branches"
+      },
+      "response": {
+        "status": 404,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "jsonBody": {
+          "message": "Not Found",
+          "documentation_url": "https://docs.github.com/rest/branches/branches#list-branches",
+          "status": "404"
+        }
+      }
+    }
+  ]
+}
