@@ -1,9 +1,7 @@
 package com.adamsm2.backend.shared.exception.handler;
 
 import com.adamsm2.backend.dto.ExceptionResource;
-import com.adamsm2.backend.shared.exception.DeserializationFailedException;
-import com.adamsm2.backend.shared.exception.GithubServiceUnavailableException;
-import com.adamsm2.backend.shared.exception.ItemNotFoundException;
+import com.adamsm2.backend.shared.exception.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -28,5 +26,17 @@ class RestResponseEntityExceptionHandler {
     ResponseEntity<ExceptionResource> handleDeserializationFailedException(final DeserializationFailedException exception) {
         final var exceptionResource = new ExceptionResource(500, exception.getMessage());
         return new ResponseEntity<>(exceptionResource, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    @ExceptionHandler(GithubRateLimitExceededException.class)
+    ResponseEntity<ExceptionResource> handleRateLimitExceededException(final GithubRateLimitExceededException exception) {
+        final var exceptionResource = new ExceptionResource(429, exception.getMessage());
+        return new ResponseEntity<>(exceptionResource, HttpStatus.TOO_MANY_REQUESTS);
+    }
+
+    @ExceptionHandler(GithubInvalidAccessTokenException.class)
+    ResponseEntity<ExceptionResource> handleGithubInvalidAccessTokenException(final GithubInvalidAccessTokenException exception) {
+        final var exceptionResource = new ExceptionResource(401, exception.getMessage());
+        return new ResponseEntity<>(exceptionResource, HttpStatus.UNAUTHORIZED);
     }
 }

@@ -11,31 +11,36 @@ import com.adamsm2.backend.shared.exception.ItemNotFoundException;
 import com.adamsm2.backend.shared.utils.DeserializationValidator;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestClient;
+import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.util.UriComponentsBuilder;
+import reactor.core.publisher.Mono;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor(access = AccessLevel.PACKAGE)
 class RepositoryService implements RepositoryUseCases {
 
-    private static final String GITHUB_API_URL = "https://api.github.com/";
     private final RepositoryMapper repositoryMapper;
-    private final RestClient restClient;
+    private final WebClient webClient;
+    @Value("${app.githubApiUrl}")
+    private String GITHUB_API_URL;
 
     @Override
     public List<RepositoryResource> getNotForkedUserRepositoriesFromGithub(
             final String username, final int page, final int size) {
         final var repositories = fetchNotForkedRepositoriesFromGithub(username, page, size);
+        final List<Mono<List<Branch>>> requests = new ArrayList<>();
         repositories.forEach(repository -> {
-            final var branches = fetchRepositoryBranches(username, repository.getName());
-            repository.setBranches(branches);
+            requests.add(fetchRepositoryBranches(username, repository.getName())
+                    .doOnSuccess(repository::setBranches));
         });
+        waitTillAllRequestsComplete(requests);
         return repositories.stream()
                 .map(repositoryMapper::mapRepositoryToRepositoryResource)
                 .toList();
@@ -43,38 +48,44 @@ class RepositoryService implements RepositoryUseCases {
 
     private List<Repository> fetchNotForkedRepositoriesFromGithub(final String username, final int page, final int size) {
         final var uri = getSearchNotForkedRepositoriesUri(username, page, size);
-        final var result = restClient.get()
+        final var result = webClient.get()
                 .uri(uri)
                 .accept(MediaType.APPLICATION_JSON)
                 .retrieve()
-                .onStatus(HttpStatusCode::is4xxClientError, (request, response) -> {
+                .onStatus(HttpStatusCode::is4xxClientError, response -> {
                     throw new ItemNotFoundException("User with given username doesn't exist");
                 })
-                .onStatus(HttpStatusCode::is5xxServerError, (request, response) -> {
+                .onStatus(HttpStatusCode::is5xxServerError, response -> {
                     throw new GithubServiceUnavailableException();
                 })
-                .body(SearchRepositoriesResponse.class);
+                .bodyToMono(SearchRepositoriesResponse.class)
+                .block();
 
         DeserializationValidator.validateDeserializationOrThrow(result);
         return result.items();
     }
 
-    private List<Branch> fetchRepositoryBranches(final String username, final String repositoryName) {
+    private Mono<List<Branch>> fetchRepositoryBranches(final String username, final String repositoryName) {
         final var uri = getRepositoryBranchesUri(username, repositoryName);
-        final var result = restClient.get()
+        final var result = webClient.get()
                 .uri(uri)
                 .accept(MediaType.APPLICATION_JSON)
                 .retrieve()
-                .onStatus(HttpStatusCode::is4xxClientError, (request, response) -> {
+                .onStatus(HttpStatusCode::is4xxClientError, response -> {
                     throw new ItemNotFoundException("Try again, cannot access a repository with given name");
                 })
-                .onStatus(HttpStatusCode::is5xxServerError, (request, response) -> {
+                .onStatus(HttpStatusCode::is5xxServerError, response -> {
                     throw new GithubServiceUnavailableException();
                 })
-                .body(Branch[].class);
+                .bodyToFlux(Branch.class)
+                .collectList();
 
         DeserializationValidator.validateDeserializationOrThrow(result);
-        return Arrays.asList(result);
+        return result;
+    }
+
+    private void waitTillAllRequestsComplete(final List<Mono<List<Branch>>> requests) {
+        Mono.when(requests).block();
     }
 
     private String getSearchNotForkedRepositoriesUri(final String username, final int page, final int size) {

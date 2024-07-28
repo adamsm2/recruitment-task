@@ -1,6 +1,8 @@
 services:
   backend:
     build: backend
+    environment:
+      - GITHUB_ACCESS_TOKEN=enter-your-github-access-token-here
     ports:
       - 8080:8080
     networks:

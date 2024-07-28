@@ -4,3 +4,7 @@ springdoc:
     operationsSorter: method
     tagsSorter: alpha
     filter: true
+
+app:
+  githubAccessToken: ${GITHUB_ACCESS_TOKEN}
+  githubApiUrl: "https://api.github.com"
